@@ -1,250 +1,325 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>Qubits & Quantum Mechanics - Explained</title>
+    <title>Qubits & Quantum Mechanics - Explained</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/blood.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/blood.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>
-					<section>
-						Qubits & Quantum Mechanics - Explained
-					</section>
-					<section>
-						<div class="fragment">
-							October 23, 2019
-						</div>
-						<div class="fragment">
-							Google achieved <a href="https://www.theverge.com/2019/10/23/20928294/google-quantum-supremacy-sycamore-computer-qubit-milestone">Quantum Supremacy</a>
-						</div>
-					</section>
-					<section>
-						54-Qubit Sycamore processor
-					</section>
-					<section>
-						<b>Problem</b>
-						<div class="fragment">
-							Verify whether a set of numbers is randomly distributed or not
-						</div>
-					</section>
-					<section>
-						IBM Summit
-						<div class="fragment">
-							10,000 years
-						</div>
-					</section>
-					<section>
-						Sycamore
-						<div class="fragment">
-							3 minutes & 20 seconds
-						</div>
-					</section>
-					<section>
-						Quantum computer is a computer that runs on Qubits instead of traditional Bits
-					</section>
-				</section>
-				<section>
-					<section>
-						Bit
-					</section>
-					<section>
-						Modern computers store the information in units of digital bits 0 or 1.
-					</section>
-					<section>
-						What are these 0s & 1s?
-						<div class="fragment">
-							It is on the hardware level -> whether the current is flowing through a transistor or not
-						</div>
-					</section>
-					<section>
-						Transistor
-						<br/>
-						<img src="./assets/transistor.jpg" class="fragment">
-					</section>
-					<section>
-						Transistors are semiconductor devices that can be controlled to allow or block flow of current
-						<div class="fragment">
-							If current is allowed it's "on" state or 1
-						</div>
-						<div class="fragment">
-							If current is blocked it's "off" state or 0
-						</div>
-					</section>
-					<section>
-						This flow of current is basically flow of "electrons" through the electrical circuit
-						<br/>
-						<b>e-</b>
-					</section>
-					<section>
-						Flow of electrons are blocked in the "off" state by introducing a barrier of insulating materials
-					</section>
-					<section>
-						<p class="fragment">
-							In "on" state - no barriers
-						</p>
-						<p class="fragment">
-							In "off" state - a barrier cuts off the flow of electrons
-						</p>
-					</section>
-					<section>
-						Size of modern transistors
-						<p class="fragment">
-							The smallest working transistor ever created is 1nm
-						</p>
-					</section>
-					<section>
-						Transistor count ∝ Performance
-					</section>
-					<section>
-						Apple's mobile phones have 7nm chips (A13 Bionic)
-						<img src="./assets/apple-transistors.png" alt="" class="fragment">
-					</section>
-					<section>
-						<p class="fragment">Red Blood Cells - 10,000 nm</p>
-						<p class="fragment">Bacteriophage virus - 15 nm</p>
-						<p class="fragment">Modern Transistors - 7 nm</p>
-					</section>
-					<section>
-						Smaller the size of the transistor 
-						<p class="fragment">
-							∝
-						</p>
-						<p class="fragment">
-							Smaller the size of the barrier blocking the electron
-						</p>
-					</section>
-					<section>
-						If the barrier get's too small... <span class="fragment">something wierd happens</span>
-					</section>
-					<section>
-						The electron "teleports" through the barrier due to a property called <b>Quantum Tunneling</b>
-						<p class="fragment">
-							Which only happens in the "Quantum realm"
-						</p>
-					</section>
-					<section>
-						<video src="./assets/quantum-realm.mp4" muted autoplay loop controls></video>
-					</section>
-				</section>
-				<section>
-					<section>
-						<b>Property 1:</b> Quantum Tunneling
-						<br>
-						<img src="./assets/groot.gif" alt=""/>
-					</section>
-					<section>
-						It is property of particles where they don't move but instead teleport through different places
-					</section>
-					<section>
-						<video src="./assets/quantum asteroid.mp4" muted autoplay loop controls></video>
-					</section>
-					<section>
-						What we observe in the normal realm is basically the positions they occupy with the highest probability of getting teleported to
-					</section>
-					<section>
-						Another problem with using Bits -> exponential problems
-					</section>
-					<section>
-						The performances of a bit increases linearly
-						<p class="fragment">
-							4 Bits -> can have only 1 of all possible 2^4 values
-						</p>
-					</section>
-					<section>
-						Problems whose complexity grows exponentially
-					</section>
-					<section>
-						Chess & Rice Grains
-						<img src="./assets/chess.jpeg" alt="" class="fragment"/>
-					</section>
-					<section>
-						64th Square - <span class="fragment">18,000,000,000,000,000,000 grains of rice</span>
-					</section>
-					<section>
-						
-					</section>
-				</section>
-				<section>
-					<section>
-						Qubit
-					</section>
-					<section>
-						Spin of an Electron
-					</section>
-					<section>
-						Polarization of a Photon
-					</section>
-				</section>
-				<section>
-					<section>
-						Quantum Super Position
-					</section>
-				</section>
-				<section>
-					<section>
-						Chess Game
-					</section>
-				</section>
-				<section>
-					<section>
-						Applications
-					</section>
-					<section>
-						Database Search
-					</section>
-					<section>
-						Cryptography
-					</section>
-					<section>
-						Chemistry
-					</section>
-					<section>
-						Biological Simulations
-					</section>
-				</section>
-				<section>
-					<section>
-						Quantum Entanglement
-					</section>
-				</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <section>
+            Qubits & Quantum Mechanics - Explained
+          </section>
+          <section>
+            <div class="fragment">
+              October 23, 2019
+            </div>
+            <div class="fragment">
+              Google achieved
+              <a
+                href="https://www.theverge.com/2019/10/23/20928294/google-quantum-supremacy-sycamore-computer-qubit-milestone"
+                >Quantum Supremacy</a
+              >
+            </div>
+          </section>
+          <section>
+            54-Qubit Sycamore processor
+          </section>
+          <section>
+            <b>Problem</b>
+            <div class="fragment">
+              Verify whether a set of numbers is randomly distributed or not
+            </div>
+          </section>
+          <section>
+            IBM Summit
+            <div class="fragment">
+              10,000 years
+            </div>
+          </section>
+          <section>
+            Sycamore
+            <div class="fragment">
+              3 minutes & 20 seconds
+            </div>
+          </section>
+          <section>
+            Quantum computer is a computer that runs on Qubits instead of
+            traditional Bits
+          </section>
+        </section>
+        <section>
+          <section>
+            Bit
+          </section>
+          <section>
+            Modern computers store the information in units of digital bits 0 or
+            1.
+          </section>
+          <section>
+            What are these 0s & 1s?
+            <div class="fragment">
+              It is on the hardware level -> whether the current is flowing
+              through a transistor or not
+            </div>
+          </section>
+          <section>
+            Transistor
+            <br />
+            <img src="./assets/transistor.jpg" class="fragment" />
+          </section>
+          <section>
+            Transistors are semiconductor devices that can be controlled to
+            allow or block flow of current
+            <div class="fragment">
+              If current is allowed it's "on" state or 1
+            </div>
+            <div class="fragment">
+              If current is blocked it's "off" state or 0
+            </div>
+          </section>
+          <section>
+            This flow of current is basically flow of "electrons" through the
+            electrical circuit
+            <br />
+            <b>e-</b>
+          </section>
+          <section>
+            Flow of electrons are blocked in the "off" state by introducing a
+            barrier of insulating materials
+          </section>
+          <section>
+            <p class="fragment">
+              In "on" state - no barriers
+            </p>
+            <p class="fragment">
+              In "off" state - a barrier cuts off the flow of electrons
+            </p>
+          </section>
+          <section>
+            Size of modern transistors
+            <p class="fragment">
+              The smallest working transistor ever created is 1nm
+            </p>
+          </section>
+          <section>
+            Transistor count ∝ Performance
+          </section>
+          <section>
+            Apple's mobile phones have 7nm chips (A13 Bionic)
+            <img src="./assets/apple-transistors.png" alt="" class="fragment" />
+          </section>
+          <section>
+            <p class="fragment">Red Blood Cells - 10,000 nm</p>
+            <p class="fragment">Bacteriophage virus - 15 nm</p>
+            <p class="fragment">Modern Transistors - 7 nm</p>
+          </section>
+          <section>
+            Smaller the size of the transistor
+            <p class="fragment">
+              ∝
+            </p>
+            <p class="fragment">
+              Smaller the size of the barrier blocking the electron
+            </p>
+          </section>
+          <section>
+            If the barrier get's too small...
+            <span class="fragment">something wierd happens</span>
+          </section>
+          <section>
+            The electron "teleports" through the barrier due to a property
+            called <b>Quantum Tunneling</b>
+            <p class="fragment">
+              Which only happens in the "Quantum realm"
+            </p>
+          </section>
+          <section>
+            <video
+              src="./assets/quantum-realm.mp4"
+              muted
+              autoplay
+              loop
+              controls
+            ></video>
+          </section>
+        </section>
+        <section>
+          <section>
+            <b>Property 1:</b> Quantum Tunneling
+            <br />
+            <img src="./assets/groot.gif" alt="" />
+          </section>
+          <section>
+            It is property of particles where they don't move but instead
+            teleport through different places
+          </section>
+          <section>
+            <video
+              src="./assets/quantum asteroid.mp4"
+              muted
+              autoplay
+              loop
+              controls
+            ></video>
+          </section>
+          <section>
+            What we observe in the normal realm is basically the positions they
+            occupy with the highest probability of getting teleported to
+          </section>
+          <section>
+            Another problem with using Bits -> exponential problems
+          </section>
+          <section>
+            The performances of a bit increases linearly
+            <p class="fragment">
+              4 Bits -> can have only 1 of all possible 2^4 values
+            </p>
+            <p>
+              Problem solving is basically going through all the 2^4 values and
+              finding that one required value
+            </p>
+          </section>
+          <section>
+            Problems whose complexity grows exponentially
+          </section>
+          <section>
+            Chess & Rice Grains
+            <img src="./assets/chess.jpeg" alt="" class="fragment" />
+          </section>
+          <section>
+            64th Square -
+            <span class="fragment"
+              >18,000,000,000,000,000,000 grains of rice</span
+            >
+          </section>
+        </section>
+        <section>
+          <section>
+            Qubit
+          </section>
+          <section>
+            Spin of an Electron
+          </section>
+          <section>
+            Polarization of a Photon
+          </section>
+        </section>
+        <section>
+          <section>
+            <b>Property 2:</b> Quantum Super Position
+            <br />
+            <video
+              src="./assets/surprised groot.mp4"
+              muted
+              autoplay
+              loop
+              controls
+              style="height: 250px; width: 250px;"
+            ></video>
+          </section>
+          <section>
+            <div>Might sound stupid</div>
+            <div class="fragment">
+              Photon may be polarized both vertically & Horizontally when it is
+              not observed
+            </div>
+          </section>
+          <section>
+            Which means at any given time a qubit is both 0 & 1!
+            <div class="fragment">While bit is 0 or 1</div>
+          </section>
+          <section>
+            4 Bits -> can have all the possible 2^4 values
+          </section>
+          <section>
+            When we observe it -> it'll collapse to 1 value
+            <br />
+            <br />
+            <iframe
+              width="640"
+              height="240"
+              src="/embed/BE5ea9eab34a575/loop/autoplay/"
+              frameborder="0"
+              allowfullscreen
+            ></iframe>
+          </section>
+          <section>
+            To solve the problem we just have to collapse all the unnecessary
+            values & find the 1 required value
+            <img src="./assets/only me.gif" alt="" />
+          </section>
+        </section>
+        <section>
+          <section>
+            Chess Game
+          </section>
+        </section>
+        <section>
+          <section>
+            Applications
+          </section>
+          <section>
+            Database Search
+          </section>
+          <section>
+            Cryptography
+          </section>
+          <section>
+            Chemistry
+          </section>
+          <section>
+            Biological Simulations
+          </section>
+        </section>
+        <section>
+          <section>
+            Quantum Entanglement
+          </section>
+        </section>
+      </div>
+    </div>
 
-		<script src="js/reveal.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				transition: 'convex',
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        hash: true,
+        transition: "convex",
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/highlight/highlight.js" },
+          { src: "plugin/notes/notes.js", async: true },
+        ],
+      });
+    </script>
+  </body>
 </html>
